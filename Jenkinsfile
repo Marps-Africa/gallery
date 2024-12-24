@@ -7,7 +7,7 @@ pipeline{
                 git branch: "master", url: "https://github.com/Raddames-Tonui/gallery"
             }
         }
-        stage('Install packages'){
+        stage('Install npm packages'){
             steps{
                 sh 'npm install'
             }
