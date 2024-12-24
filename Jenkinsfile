@@ -1,27 +1,29 @@
 pipeline{
+
     agent any
+
     tools{
         nodejs 'node'
+    }
+    triggers{
+        githubPush()
     }
     stages{
         stage("Clone Repository!") {
             steps {
-                git branch: "master", url: "https://github.com/Raddames-Tonui/gallery"
+                git branch: "master", url: "https://github.com/Marps-Africa/gallery.git"
             }
         }
-        stage('Install npm packages'){
+        stage('Install Dependencies'){
             steps{
+                echo 'Installing Dependencies'
                 sh 'npm install'
             }
         }
-        stage('Test'){
+        stage('Run Tests'){
             steps{
+                echo 'Running Tests'
                 sh 'npm test'
-            }
-        }
-        stage('Build'){
-            steps{
-                sh 'npm run build'
             }
         }
     }
