@@ -4,7 +4,7 @@ pipeline{
         nodejs 'node'
     }
     stages{
-        stage("Clone Repository") {
+        stage("Clone Repository!") {
             steps {
                 git branch: "master", url: "https://github.com/Raddames-Tonui/gallery"
             }
