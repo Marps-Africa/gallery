@@ -24,14 +24,14 @@ pipeline{
           }
           stage("Deploy to Render") {
             steps {
-                echo 'Deploying application to Render....'
+                echo 'Deploying application to Render...'
                 sh "curl -X POST ${RENDER_DEPLOY_HOOK}"
             }
         }
      }
      post{
           always{
-               echo 'This is the end of the pipeline'
+               echo 'This is the end of the pipeline!'
           }
           success{
                echo 'The pipeline has been successful'
