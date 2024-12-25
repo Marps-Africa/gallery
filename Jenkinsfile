@@ -37,10 +37,10 @@ pipeline{
                echo 'The pipeline has been successful'
           }
           failure{
-               echo 'The pipeline has failed'
+               echo 'The pipeline has failed.'
           }
           aborted{
-               echo 'The pipeline has been aborted'
+               echo 'The pipeline has been aborted.'
           }
      }
 
